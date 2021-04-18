@@ -4,17 +4,28 @@ import React from "react";
 
 import "./SearchInput.css";
 
-function SearchInput() {
+function SearchInput(props) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleInputChange = (e) => {
+    props.handleQuery(e.target.value);
+  };
+
   return (
     <>
-      <input
-        type="text"
-        className="input-search"
-        name="q"
-        id="query"
-        placeholder="Search a gif"
-        autoComplete="off"
-      />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="input-search"
+          name="q"
+          id="query"
+          placeholder="Search a gif"
+          autoComplete="off"
+          onInput={handleInputChange}
+        />
+      </form>
     </>
   );
 }

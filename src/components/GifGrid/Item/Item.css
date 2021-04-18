@@ -1,5 +1,4 @@
 .item {
-  padding: 0.5rem;
   border: 1px solid #c7c3c3;
   border-radius: 0.2rem;
   overflow: hidden;
@@ -7,4 +6,11 @@
 
 .item p {
   text-align: center;
+  padding: 1rem;
+}
+
+.item img {
+  max-width: 100%;
+  min-width: 100%;
+  display: inline-block;
 }
