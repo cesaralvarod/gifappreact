@@ -2,9 +2,9 @@ import React from "react";
 
 // Styles
 
-import "./Item.css";
+import "./GifGridItem.css";
 
-function Item(props) {
+function GifGridItem(props) {
   const { id, title, url } = props.image;
 
   return (
@@ -15,4 +15,4 @@ function Item(props) {
   );
 }
 
-export default Item;
+export default GifGridItem;

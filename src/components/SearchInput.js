@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Styles
 
 import "./SearchInput.css";
 
 function SearchInput(props) {
+  const [query, setQuery] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.handleQuery(query);
   };
 
   const handleInputChange = (e) => {
-    props.handleQuery(e.target.value);
+    setQuery(e.target.value);
   };
 
   return (
@@ -23,7 +26,7 @@ function SearchInput(props) {
           id="query"
           placeholder="Search a gif"
           autoComplete="off"
-          onInput={handleInputChange}
+          onChange={handleInputChange}
         />
       </form>
     </>

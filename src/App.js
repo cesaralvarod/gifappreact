@@ -6,8 +6,8 @@ import "./App.css";
 
 // Component
 
-import SearchInput from "./components/SearchInput/SearchInput";
-import GifGrid from "./components/GifGrid/GifGrid";
+import SearchInput from "./components/SearchInput";
+import GifGrid from "./components/GifGrid";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -16,13 +16,13 @@ function App() {
     setQuery(value);
   };
 
-  console.log(query);
-
   return (
     <div className="container">
       <h1>Gif App React</h1>
       <SearchInput handleQuery={handleQuery} />
-      <GifGrid query={query} />
+      <div className="content">
+        <GifGrid query={query} />
+      </div>
     </div>
   );
 }
