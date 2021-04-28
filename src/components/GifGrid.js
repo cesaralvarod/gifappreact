@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // Styles
 
@@ -9,25 +9,18 @@ import "./GifGrid.css";
 import GifGridItem from "./GifGridItem";
 import Loading from "./Loading";
 
-// Helpers
+// Hook
 
-import getGIF from "../helpers/getGIF";
+import useFetchGif from "../hooks/useFetchGifs";
 
 function GifGrid(props) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const [images, setImages] = useState([]);
-
   const query = props.query;
 
-  useEffect(() => {
-    getGIF(query)
-      .then((imgs) => {
-        setImages(imgs);
-        setIsLoading(false);
-      })
-      .catch((err) => console.error("Oh no!"));
-  }, [query]);
+  const state = useFetchGif(query);
+
+  const images = state.data;
+
+  const isLoading = state.loading;
 
   return (
     <div className="list-items">
