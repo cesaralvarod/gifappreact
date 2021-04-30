@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 // Styles
 
 import "./SearchInput.css";
 
-function SearchInput(props) {
+function SearchInput({ handleQuery }) {
   const [query, setQuery] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.handleQuery(query);
+    console.log("handle submit", setQuery);
+    handleQuery(query);
   };
 
   const handleInputChange = (e) => {
@@ -32,5 +34,9 @@ function SearchInput(props) {
     </>
   );
 }
+
+SearchInput.propTypes = {
+  handleQuery: PropTypes.func.isRequired,
+};
 
 export default SearchInput;

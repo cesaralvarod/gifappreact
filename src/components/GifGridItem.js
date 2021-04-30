@@ -1,12 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styles
 
 import "./GifGridItem.css";
 
-function GifGridItem(props) {
-  const { id, title, url } = props.image;
-
+function GifGridItem({ id, title, url }) {
   return (
     <li key={id} className="item">
       <img src={url} alt={title} />
@@ -14,5 +13,11 @@ function GifGridItem(props) {
     </li>
   );
 }
+
+GifGridItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
 
 export default GifGridItem;

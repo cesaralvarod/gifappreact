@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <SearchInput /> Should be true 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="input-search"
+      id="query"
+      name="q"
+      onChange={[Function]}
+      placeholder="Search a gif"
+      type="text"
+    />
+  </form>
+</Fragment>
+`;

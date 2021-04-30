@@ -27,7 +27,7 @@ function GifGrid(props) {
       {isLoading ? <Loading /> : null}
       <ul>
         {images.map((img, index) => {
-          return <GifGridItem image={img} />;
+          return <GifGridItem id={img.id} title={img.title} url={img.url} />;
         })}
       </ul>
     </div>
