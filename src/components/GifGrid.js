@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Styles
 
@@ -13,9 +14,7 @@ import Loading from "./Loading";
 
 import useFetchGif from "../hooks/useFetchGifs";
 
-function GifGrid(props) {
-  const query = props.query;
-
+function GifGrid({ query }) {
   const state = useFetchGif(query);
 
   const images = state.data;
@@ -33,5 +32,9 @@ function GifGrid(props) {
     </div>
   );
 }
+
+GifGrid.propTypes = {
+  query: PropTypes.string.isRequired,
+};
 
 export default GifGrid;

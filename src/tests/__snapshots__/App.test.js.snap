@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <App /> Should show component 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Gif App React
+  </h1>
+  <SearchInput
+    handleQuery={[Function]}
+  />
+  <div
+    className="content"
+  >
+    <GifGrid
+      query=""
+    />
+  </div>
+</div>
+`;
