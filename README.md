@@ -1,4 +1,4 @@
-# Notes App
+# Gif App
 
 Gif App is an application that consumes the [Giphy API](https://developers.giphy.com/) and shows different gifs, you can also search for them.
 
