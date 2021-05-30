@@ -30,7 +30,7 @@ git clone https://github.com/cesaralvarod/gifappreact
 Now go to the project folder
 
 ```
-cd notesapp-react/
+cd gifappreact
 ```
 
 # Starting
