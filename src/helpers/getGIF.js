@@ -1,7 +1,7 @@
 let key = "KJszTsi2zXgt4p0xqIySIFQWko09pUfk";
 
 const getGIF = async (query) => {
-  if (query == "") {
+  if (query === "") {
     query = "trending";
   }
   let url = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${encodeURI(
