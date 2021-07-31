@@ -9,7 +9,7 @@ import "./App.css";
 import SearchInput from "./components/SearchInput";
 import GifGrid from "./components/GifGrid";
 
-function App() {
+const App = () => {
   const [query, setQuery] = useState("");
 
   const handleQuery = (value) => {
@@ -25,6 +25,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

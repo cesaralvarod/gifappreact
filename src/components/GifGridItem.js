@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 
 import "./GifGridItem.css";
 
-function GifGridItem({ id, title, url }) {
+const GifGridItem = ({ id, title, url }) => {
   return (
     <li key={id} className="item">
       <img src={url} alt={title} />
       <p>{title}</p>
     </li>
   );
-}
+};
 
 GifGridItem.propTypes = {
   id: PropTypes.string.isRequired,

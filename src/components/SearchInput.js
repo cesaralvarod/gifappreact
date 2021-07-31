@@ -5,17 +5,22 @@ import PropTypes from "prop-types";
 
 import "./SearchInput.css";
 
-function SearchInput({ handleQuery }) {
+const SearchInput = ({ handleQuery }) => {
   const [query, setQuery] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("handle submit", setQuery);
-    handleQuery(query);
+
+    console.log("handle Submit", query);
+
+    if (query !== "") {
+      handleQuery(query);
+    }
   };
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
+    console.log("handleInputChange", query);
   };
 
   return (
@@ -28,12 +33,13 @@ function SearchInput({ handleQuery }) {
           id="query"
           placeholder="Search a gif"
           autoComplete="off"
+          value={query}
           onChange={handleInputChange}
         />
       </form>
     </>
   );
-}
+};
 
 SearchInput.propTypes = {
   handleQuery: PropTypes.func.isRequired,

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing in GifGridItem.js Component <GifGridItem /> should show correctly 1`] = `
+<li
+  className="item"
+  key="23231928"
+>
+  <img
+    alt="Title"
+    src="https://example.com"
+  />
+  <p>
+    Title
+  </p>
+</li>
+`;
