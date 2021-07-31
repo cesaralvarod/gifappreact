@@ -11,8 +11,6 @@ const SearchInput = ({ handleQuery }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("handle Submit", query);
-
     if (query !== "") {
       handleQuery(query);
     }
@@ -20,7 +18,6 @@ const SearchInput = ({ handleQuery }) => {
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
-    console.log("handleInputChange", query);
   };
 
   return (

@@ -19,13 +19,13 @@ describe("Testing in SearchInput.js", () => {
   });
 
   test("Simulate input event from component <Searchinput />", () => {
-    const input = wrapper.find("input");
-
     const value = "Rick and Morty";
 
-    input.simulate("change", { target: { value } } /* this is my event */);
+    wrapper
+      .find("input")
+      .simulate("change", { target: { value } } /* this is my event */);
 
-    expect(input.props().value).toBe(value);
+    expect(wrapper.find("input").props().value).toBe(value);
   });
 
   test("Shouldn't post info when form is submit", () => {
@@ -37,15 +37,11 @@ describe("Testing in SearchInput.js", () => {
   });
 
   test("Should call handleQuery() and clean input text", () => {
-    const form = wrapper.find("form");
-
-    const input = wrapper.find("input");
-
     const value = "Rick and Morty";
 
-    input.simulate("change", { target: { value } });
+    wrapper.find("input").simulate("change", { target: { value } });
 
-    form.simulate("submit", { preventDefault() {} });
+    wrapper.find("form").simulate("submit", { preventDefault() {} });
 
     expect(handleQuery).toHaveBeenCalled();
   });
