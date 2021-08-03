@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import getGIF from "../helpers/getGIF";
 
-function useFetchGif(query) {
+const useFetchGif = (query) => {
   const [state, setState] = useState({
     data: [],
     loading: true,
@@ -22,6 +22,6 @@ function useFetchGif(query) {
   }, [query]);
 
   return state;
-}
+};
 
 export default useFetchGif;

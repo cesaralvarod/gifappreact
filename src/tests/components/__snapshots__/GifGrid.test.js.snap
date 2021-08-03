@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing in GifGrid.js Component <GifGrid /> should show correctly 1`] = `
+<div
+  className="list-items"
+>
+  <Loading />
+  <ul />
+</div>
+`;
+
+exports[`Testing in GifGrid.js Component <GifGrid /> should show items when images are loaded 1`] = `
+<div
+  className="list-items"
+>
+  <ul>
+    <GifGridItem
+      id="12312sa"
+      key="12312sa"
+      title="GIF"
+      url="https://gifurl.com"
+    />
+  </ul>
+</div>
+`;

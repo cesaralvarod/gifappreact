@@ -15,18 +15,21 @@ import Loading from "./Loading";
 import useFetchGif from "../hooks/useFetchGifs";
 
 function GifGrid({ query }) {
-  const state = useFetchGif(query);
-
-  const images = state.data;
-
-  const isLoading = state.loading;
+  const { data: images, loading } = useFetchGif(query);
 
   return (
     <div className="list-items">
-      {isLoading ? <Loading /> : null}
+      {loading ? <Loading /> : null}
       <ul>
-        {images.map((img, index) => {
-          return <GifGridItem id={img.id} title={img.title} url={img.url} />;
+        {images.map((img) => {
+          return (
+            <GifGridItem
+              key={img.id}
+              id={img.id}
+              title={img.title}
+              url={img.url}
+            />
+          );
         })}
       </ul>
     </div>
